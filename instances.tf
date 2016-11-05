@@ -1,7 +1,7 @@
 resource "aws_instance" "primary-az1" {
   instance_type = "${var.instance_class}"
   ami           = "${var.ami_id}"
-  key_name      = "nick@nicksantamaria.net#20160216"
+  key_name      = "${var.key_name}"
   subnet_id = "${aws_subnet.primary-az1.id}"
   vpc_security_group_ids = ["${aws_security_group.primary-default.id}"]
 
@@ -21,7 +21,7 @@ resource "aws_instance" "primary-az1" {
 resource "aws_instance" "primary-az2" {
   instance_type = "${var.instance_class}"
   ami           = "${var.ami_id}"
-  key_name      = "nick@nicksantamaria.net#20160216"
+  key_name      = "${var.key_name}"
   subnet_id = "${aws_subnet.primary-az2.id}"
   vpc_security_group_ids = ["${aws_security_group.primary-default.id}"]
 
@@ -41,7 +41,7 @@ resource "aws_instance" "primary-az2" {
 resource "aws_instance" "secondary-az1" {
   instance_type = "${var.instance_class}"
   ami           = "${var.ami_id}"
-  key_name      = "nick@nicksantamaria.net#20160216"
+  key_name      = "${var.key_name}"
   subnet_id = "${aws_subnet.secondary-az1.id}"
   vpc_security_group_ids = ["${aws_security_group.secondary-default.id}"]
 
@@ -61,7 +61,7 @@ resource "aws_instance" "secondary-az1" {
 resource "aws_instance" "secondary-az2" {
   instance_type = "${var.instance_class}"
   ami           = "${var.ami_id}"
-  key_name      = "nick@nicksantamaria.net#20160216"
+  key_name      = "${var.key_name}"
   subnet_id = "${aws_subnet.secondary-az2.id}"
   vpc_security_group_ids = ["${aws_security_group.secondary-default.id}"]
 

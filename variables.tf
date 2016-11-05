@@ -9,3 +9,7 @@ variable "ami_id" {
 variable "instance_class" {
   default = "m3.medium"
 }
+
+variable "key_name" {
+  description = "SSH key name to launch instances with"
+}
