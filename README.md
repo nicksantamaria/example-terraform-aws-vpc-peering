@@ -3,6 +3,12 @@
 This project aims to provide a very straight-forward example of peering 2 entire
 VPCs using Terraform.
 
+Terraform provisions the following architecture:
+
+![Terraform diagram](http://www.nicksantamaria.net/img/peer-vpc-diagram-connectivity.png)
+
+Once provisioning is complete, run the [test script](test-instance-connectivity.php) to validate each of the connections.
+
 ## Dependencies
 
 * Terraform v0.7 or greater
