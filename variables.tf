@@ -13,3 +13,4 @@ variable "instance_class" {
 variable "key_name" {
   description = "SSH key name to launch instances with"
 }
+
